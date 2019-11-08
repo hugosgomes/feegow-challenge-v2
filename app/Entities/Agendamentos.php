@@ -30,4 +30,8 @@ class Agendamentos extends Model implements Transformable
         'date_time'
     ];
 
+    public function setCpfAttribute($value){
+        $this->attributes['cpf'] = str_replace(['-', '.'], '', $value);
+    }
+
 }
