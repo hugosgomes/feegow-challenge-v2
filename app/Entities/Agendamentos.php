@@ -21,7 +21,7 @@ class Agendamentos extends Model implements Transformable
      * @var array
      */
     protected $fillable = [
-        'specialty_id',
+        'speciality_id',
         'professional_id',
         'name',
         'cpf',

@@ -17,7 +17,7 @@ class CreateAgendamentosTable extends Migration
 	{
 		Schema::create('agendamentos', function(Blueprint $table) {
             $table->increments('id');
-            $table->unsignedBigInteger('specialty_id');
+            $table->unsignedBigInteger('speciality_id');
             $table->unsignedBigInteger('professional_id');
             $table->string('name');
             $table->string('cpf', 11);

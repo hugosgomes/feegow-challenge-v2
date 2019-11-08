@@ -11,4 +11,6 @@
 |
 */
 
-Route::get('/', 'AgendamentosController@index');
+Route::get('/', 'AgendamentosController@index')->name('index');
+Route::post('/getProfessionals', 'AgendamentosController@getProfessionals');
+Route::post('/agendamentos/store', 'AgendamentosController@store')->name('agendamentos.store');

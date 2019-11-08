@@ -3,17 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Api\FeegowApi;
+use App\Services\AgendamentosService;
+use DateTime;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
-
-/**
- * Class AgendamentosController.
- *
- * @package namespace App\Http\Controllers;
- */
 class AgendamentosController extends Controller
 {
+
+    protected $service;
+
+    public function __construct(AgendamentosService $service){
+        $this->service = $service;
+    }
+
     public function index()
     {
         $specialtiesList = FeegowApi::getSpecialists();
@@ -21,8 +23,22 @@ class AgendamentosController extends Controller
         return view('agendamentos.index', compact('specialtiesList', 'pacientsListSource'));
     }
 
-    public function getProfessionals($unity_id){
-        $professionals = FeegowApi::getProfessionals($unity_id);
+    public function getProfessionals(Request $request){
+        $data = $request->all();
+        $professionals = FeegowApi::getProfessionals($data['speciality_id']);
         return json_encode($professionals);
+    }
+
+    public function store(Request $request){
+        $data = $request->all();
+        $data['date_time'] = new DateTime();
+        $request = $this->service->store($data);
+
+        $session = [
+            'success'   => $request['success'],
+            'messages'  => $request['messages']
+        ];
+
+        return redirect()->route('index')->with('success', $session);
     }
 }
