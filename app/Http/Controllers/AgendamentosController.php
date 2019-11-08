@@ -14,17 +14,15 @@ use App\Http\Requests;
  */
 class AgendamentosController extends Controller
 {
-        /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $specialtiesList = FeegowApi::getSpecialists();
-        $professionalsList = FeegowApi::getProfessionals(247);
         $pacientsListSource = FeegowApi::getPacientsListSource();
-        dd($pacientsListSource);
-        return view('agendamentos.index', compact('agendamentos'));
+        return view('agendamentos.index', compact('specialtiesList', 'pacientsListSource'));
+    }
+
+    public function getProfessionals($unity_id){
+        $professionals = FeegowApi::getProfessionals($unity_id);
+        return json_encode($professionals);
     }
 }

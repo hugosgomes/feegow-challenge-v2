@@ -1,0 +1,134 @@
+.btn_1{
+    border:none;
+    color:#ffffff;
+    background:#434bdf;
+    outline:none;
+    cursor:pointer;
+    display:inline-block;
+    text-decoration: none;
+    padding: 12px 25px;
+    font-weight: 600PX;
+    text-align: center;
+    line-height: 1
+}
+a.btn_1.rounded, .btn_1.rounded {
+    border-radius: 25px !important;
+}
+    .form-inline{
+       height: 100px;
+}
+.navbar-nav{
+    backgroudn:
+}
+
+/* CSS design by @jofpin */
+@import url(https://fonts.googleapis.com/css?family=Raleway|Varela+Round|Coda);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+body {
+  background: #fffcdd;
+  padding: 2.23em;
+}
+.user-profile {
+    margin: auto;
+      width: 25em; 
+    height: auto;
+    background: #fff;
+    border-radius: .3em;
+    box-shadow: 0 7px 15px rgba(0, 9, 128, 0.05), 0 12px 28px rgba(0, 9, 128, 0.075);
+  }
+  
+  .user-profile  .username {
+    margin: auto;
+    margin-top: -3.40em;
+    margin-left: 5.80em;
+    color: #658585;
+    font-size: 1.53em;
+    font-family: "Coda", sans-serif;
+    font-weight: bold;
+  }
+   .descript{
+    margin: auto;
+    margin-top: -0.10em;
+    margin-left: 7.00em;
+  }
+
+.user-profile > .description {
+    margin: auto;
+    margin-top: 1.35em;
+    margin-right: 4.43em;
+    width: 14em;
+    color: #c0c5c5; 
+    font-size: .87em;
+    font-family: "varela round", sans-serif;
+  }
+  .user-profile > img.avatar {
+      padding: .7em;
+    margin-left: .3em;
+    margin-top: .3em;
+    height: 6.23em;
+    width: 6.23em;
+    border-radius: 18em;
+  }
+  /*cards*/
+  .glyphicon { margin-right:5px; }
+.thumbnail
+{
+    margin-bottom: 20px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.item.list-group-item
+{
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
+{
+    background: #428bca;
+}
+
+.item.list-group-item .list-group-image
+{
+    margin-right: 10px;
+}
+.item.list-group-item .thumbnail
+{
+    margin-bottom: 0px;
+}
+.item.list-group-item .caption
+{
+    padding: 9px 9px 0px 9px;
+}
+.item.list-group-item:nth-of-type(odd)
+{
+    background: #eeeeee;
+}
+
+.item.list-group-item:before, .item.list-group-item:after
+{
+    display: table;
+    content: " ";
+}
+
+.item.list-group-item img
+{
+    float: left;
+}
+.item.list-group-item:after
+{
+    clear: both;
+}
+.list-group-item-text
+{
+    margin: 0 0 11px;
+}
